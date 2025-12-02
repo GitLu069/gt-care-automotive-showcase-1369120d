@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo-gtcare.png";
 
 const Footer = () => {
@@ -6,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex flex-col items-center md:items-start">
-            <img src={logo} alt="GT Care" className="h-12 w-auto mb-4" />
+            <img src={logo} alt="GT Care Lyon - Lavage automobile premium" className="h-12 w-auto mb-4" />
             <p className="text-muted-foreground text-sm">
               Votre véhicule mérite l'excellence
             </p>
@@ -37,12 +38,12 @@ const Footer = () => {
             >
               Contact
             </a>
-            <a
-              href="#mentions-legales"
+            <Link
+              to="/mentions-legales"
               className="text-muted-foreground hover:text-primary transition-colors text-sm"
             >
               Mentions légales
-            </a>
+            </Link>
           </nav>
         </div>
 
