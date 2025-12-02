@@ -4,7 +4,6 @@ import Services from "@/components/Services";
 import Subscriptions from "@/components/Subscriptions";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-import LegalMentions from "@/components/LegalMentions";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -16,7 +15,6 @@ const Index = () => {
       <Subscriptions />
       <About />
       <Contact />
-      <LegalMentions />
       <Footer />
     </main>
   );
