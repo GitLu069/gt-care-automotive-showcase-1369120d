@@ -2,11 +2,16 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section 
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      aria-label="Accueil GT Care - Lavage automobile premium"
+    >
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
+        role="img"
+        aria-label="Voiture de luxe propre et brillante après lavage professionnel"
       >
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
       </div>
@@ -37,12 +42,14 @@ const Hero = () => {
           <a
             href="#services"
             className="bg-primary text-primary-foreground px-8 py-4 rounded-sm text-sm font-semibold tracking-widest uppercase hover:bg-primary/90 transition-all duration-300 glow-cyan"
+            aria-label="Découvrir nos prestations de lavage automobile"
           >
             Découvrir nos prestations
           </a>
           <a
             href="#contact"
             className="border border-foreground/30 text-foreground px-8 py-4 rounded-sm text-sm font-semibold tracking-widest uppercase hover:border-primary hover:text-primary transition-all duration-300"
+            aria-label="Nous contacter pour réserver un lavage"
           >
             Nous contacter
           </a>
@@ -51,7 +58,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 animate-float z-20">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 animate-float z-20" aria-hidden="true">
         <div className="w-6 h-10 border-2 border-foreground/30 rounded-full flex justify-center pt-2">
           <div className="w-1 h-3 bg-primary rounded-full animate-pulse" />
         </div>

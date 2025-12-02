@@ -2,25 +2,25 @@ import { Sparkles, Clock } from "lucide-react";
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 bg-card/50">
+    <section id="services" className="py-24 bg-card/50" aria-labelledby="services-heading">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <header className="text-center mb-16">
           <span className="text-primary text-sm font-semibold tracking-widest uppercase">
             Nos prestations
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6">
+          <h2 id="services-heading" className="text-3xl md:text-5xl font-bold mt-4 mb-6">
             Un service <span className="text-gradient">sur-mesure</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Choisissez la formule adaptée à vos besoins parmi nos prestations Premium et Éco.
           </p>
-        </div>
+        </header>
 
         {/* Lavage Premium */}
-        <div className="mb-16">
+        <article className="mb-16" aria-labelledby="premium-heading">
           <div className="flex items-center gap-3 mb-8">
-            <Sparkles className="text-primary w-6 h-6" />
-            <h3 className="text-2xl md:text-3xl font-bold text-gradient">
+            <Sparkles className="text-primary w-6 h-6" aria-hidden="true" />
+            <h3 id="premium-heading" className="text-2xl md:text-3xl font-bold text-gradient">
               Lavage Premium
             </h3>
           </div>
@@ -69,13 +69,13 @@ const Services = () => {
             <Clock className="w-4 h-4" />
             <span className="text-sm italic">Prestation d'environ 5h</span>
           </div>
-        </div>
+        </article>
 
         {/* Lavage Éco */}
-        <div>
+        <article aria-labelledby="eco-heading">
           <div className="flex items-center gap-3 mb-8">
-            <Sparkles className="text-primary w-6 h-6" />
-            <h3 className="text-2xl md:text-3xl font-bold text-gradient">
+            <Sparkles className="text-primary w-6 h-6" aria-hidden="true" />
+            <h3 id="eco-heading" className="text-2xl md:text-3xl font-bold text-gradient">
               Lavage Éco
             </h3>
           </div>
@@ -115,7 +115,7 @@ const Services = () => {
             <Clock className="w-4 h-4" />
             <span className="text-sm italic">Prestation d'environ 2h</span>
           </div>
-        </div>
+        </article>
       </div>
     </section>
   );

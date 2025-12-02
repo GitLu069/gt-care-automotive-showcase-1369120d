@@ -12,7 +12,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <nav className="flex flex-wrap justify-center gap-6">
+          <nav className="flex flex-wrap justify-center gap-6" aria-label="Navigation footer">
             <a
               href="#services"
               className="text-muted-foreground hover:text-primary transition-colors text-sm"
@@ -36,6 +36,12 @@ const Footer = () => {
               className="text-muted-foreground hover:text-primary transition-colors text-sm"
             >
               Contact
+            </a>
+            <a
+              href="#mentions-legales"
+              className="text-muted-foreground hover:text-primary transition-colors text-sm"
+            >
+              Mentions légales
             </a>
           </nav>
         </div>

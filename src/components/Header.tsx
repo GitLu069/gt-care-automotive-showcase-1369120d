@@ -26,14 +26,28 @@ const Header = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled ? "glass py-3" : "bg-transparent py-6"
       }`}
+      role="banner"
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <a href="#" className="flex items-center">
-          <img src={logo} alt="GT Care" className="h-12 md:h-16 w-auto" />
+        <a 
+          href="#" 
+          className="flex items-center"
+          aria-label="GT Care - Retour à l'accueil"
+        >
+          <img 
+            src={logo} 
+            alt="GT Care Lyon - Service de lavage automobile premium à domicile" 
+            className="h-12 md:h-16 w-auto" 
+            width="160"
+            height="64"
+          />
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav 
+          className="hidden md:flex items-center gap-8"
+          aria-label="Navigation principale"
+        >
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -46,6 +60,7 @@ const Header = () => {
           <a
             href="#contact"
             className="bg-primary text-primary-foreground px-6 py-2.5 rounded-sm text-sm font-semibold tracking-wide uppercase hover:bg-primary/90 transition-all duration-300 glow-cyan"
+            aria-label="Réserver un lavage automobile"
           >
             Réserver
           </a>
@@ -55,14 +70,21 @@ const Header = () => {
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="md:hidden text-foreground p-2"
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-menu"
+          aria-label={isMobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
         >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMobileMenuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <nav className="md:hidden glass mt-2 mx-4 rounded-lg p-6 animate-fade-in">
+        <nav 
+          id="mobile-menu"
+          className="md:hidden glass mt-2 mx-4 rounded-lg p-6 animate-fade-in"
+          aria-label="Navigation mobile"
+        >
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
@@ -78,6 +100,7 @@ const Header = () => {
               href="#contact"
               onClick={() => setIsMobileMenuOpen(false)}
               className="bg-primary text-primary-foreground px-6 py-3 rounded-sm text-sm font-semibold tracking-wide uppercase text-center mt-2"
+              aria-label="Réserver un lavage automobile"
             >
               Réserver
             </a>

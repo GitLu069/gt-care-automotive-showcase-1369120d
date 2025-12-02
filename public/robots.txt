@@ -1,3 +1,6 @@
+# Robots.txt for GT Care Lyon
+# https://gtcare.fr
+
 User-agent: Googlebot
 Allow: /
 
@@ -12,3 +15,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# Sitemap location
+Sitemap: https://gtcare.fr/sitemap.xml
