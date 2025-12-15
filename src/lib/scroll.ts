@@ -4,8 +4,3 @@ export const scrollToSection = (sectionId: string) => {
     element.scrollIntoView({ behavior: "smooth" });
   }
 };
-
-export const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
-  e.preventDefault();
-  scrollToSection(sectionId);
-};
