@@ -1,4 +1,5 @@
 import heroBg from "@/assets/hero-bg.jpg";
+import { scrollToSection } from "@/lib/scroll";
 
 const Hero = () => {
   return (
@@ -39,20 +40,20 @@ const Hero = () => {
           className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up"
           style={{ animationDelay: "0.4s" }}
         >
-          <a
-            href="#services"
-            className="bg-primary text-primary-foreground px-8 py-4 rounded-sm text-sm font-semibold tracking-widest uppercase hover:bg-primary/90 transition-all duration-300 glow-cyan"
+          <button
+            onClick={() => scrollToSection("services")}
+            className="bg-primary text-primary-foreground px-8 py-4 rounded-sm text-sm font-semibold tracking-widest uppercase hover:bg-primary/90 transition-all duration-300 glow-cyan cursor-pointer"
             aria-label="Découvrir nos prestations de lavage automobile"
           >
             Découvrir nos prestations
-          </a>
-          <a
-            href="#contact"
-            className="border border-foreground/30 text-foreground px-8 py-4 rounded-sm text-sm font-semibold tracking-widest uppercase hover:border-primary hover:text-primary transition-all duration-300"
+          </button>
+          <button
+            onClick={() => scrollToSection("contact")}
+            className="border border-foreground/30 text-foreground px-8 py-4 rounded-sm text-sm font-semibold tracking-widest uppercase hover:border-primary hover:text-primary transition-all duration-300 bg-transparent cursor-pointer"
             aria-label="Nous contacter pour réserver un lavage"
           >
             Nous contacter
-          </a>
+          </button>
         </div>
 
       </div>

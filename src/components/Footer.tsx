@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo-gtcare.png";
+import { scrollToSection } from "@/lib/scroll";
 
 const Footer = () => {
   return (
@@ -14,30 +15,30 @@ const Footer = () => {
           </div>
 
           <nav className="flex flex-wrap justify-center gap-6" aria-label="Navigation footer">
-            <a
-              href="#services"
-              className="text-muted-foreground hover:text-primary transition-colors text-sm"
+            <button
+              onClick={() => scrollToSection("services")}
+              className="text-muted-foreground hover:text-primary transition-colors text-sm bg-transparent border-none cursor-pointer"
             >
               Prestations
-            </a>
-            <a
-              href="#subscriptions"
-              className="text-muted-foreground hover:text-primary transition-colors text-sm"
+            </button>
+            <button
+              onClick={() => scrollToSection("subscriptions")}
+              className="text-muted-foreground hover:text-primary transition-colors text-sm bg-transparent border-none cursor-pointer"
             >
               Abonnements
-            </a>
-            <a
-              href="#about"
-              className="text-muted-foreground hover:text-primary transition-colors text-sm"
+            </button>
+            <button
+              onClick={() => scrollToSection("about")}
+              className="text-muted-foreground hover:text-primary transition-colors text-sm bg-transparent border-none cursor-pointer"
             >
               À propos
-            </a>
-            <a
-              href="#contact"
-              className="text-muted-foreground hover:text-primary transition-colors text-sm"
+            </button>
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="text-muted-foreground hover:text-primary transition-colors text-sm bg-transparent border-none cursor-pointer"
             >
               Contact
-            </a>
+            </button>
             <Link
               to="/mentions-legales"
               className="text-muted-foreground hover:text-primary transition-colors text-sm"
